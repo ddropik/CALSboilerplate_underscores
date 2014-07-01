@@ -1,5 +1,20 @@
-@import 'reset';
+//CALS Partials, per boilerplate
+/*
 @import 'scaffolding';
 @import 'button';
 @import 'colors';
 @import 'fonts';
+*/
+
+// Default Styles from underscores
+@import 'uscores_accessibility';
+@import 'uscores_alignments';
+@import 'uscores_clearings';
+@import 'uscores_content';
+@import 'uscores_forms';
+@import 'uscores_infiniitescroll';
+@import 'uscores_media';
+@import 'uscores_navigation';
+@import 'uscores_reset';
+@import 'uscores_typography';
+@import 'uscores_widgets';
