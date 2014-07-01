@@ -29,6 +29,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
+		<a href="#" class="button">button</a>
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
