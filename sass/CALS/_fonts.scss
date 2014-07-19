@@ -2,11 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
 
 /* Open Sans Normal and Bold (400,700) */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 /* Raleway Light (300) */
-@import url(http://fonts.googleapis.com/css?family=Raleway:300);
-
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,500);
 
 
 body {
@@ -14,19 +13,19 @@ body {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   font-family: 'Roboto','Open Sans',sans-serif;
   font-weight: 300;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2em;
   font-family: 'Roboto','Open Sans',sans-serif;
   font-weight: 400;
 }
 
 h3 {
-  font-size: 2.5em;
+  font-size: 1.4em;
   font-family: 'Open Sans',sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
@@ -36,6 +35,6 @@ h3 {
 p {
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 1.2em;
 }

@@ -1,0 +1,315 @@
+#primary, #masthead {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+
+#page {
+  background: linear-gradient(to bottom, rgba(150,0,1,.8) 50%,rgba(150,0,1,0) 100%);
+}
+
+.home .headerContainer {
+
+  position: relative;
+  background: $primaryHeaderBg url("../../../dist/images/equipmentcollection2.svg") no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+}
+
+.headerContainer {
+
+  position: relative;
+  background: $primaryHeaderBg;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+#page {
+  font-family: "Open Sans", sans-serif;
+  padding: 2em;
+  color: $white;
+
+  .site-branding {
+    h1 {
+      font-size: 0px;
+      text-indent: -100000px;
+
+      a {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        height: 100px;
+        background: url("../../../img/calsitlogo.svg") no-repeat;
+        background-size: 100%;
+        position: relative;
+
+      }
+    }
+
+    h2 {
+      position: absolute;
+      top: -10000px;
+    }
+  }
+
+  .main-navigation {
+
+    margin-top: 1.3em;
+
+    .menu-primary-menu-container {
+      float: right;
+    }
+
+    li {
+
+      margin-left: 1em;
+
+        a {
+          color: $white;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 0.9em;
+        }
+    }
+
+
+  }
+
+}
+
+body {
+
+
+
+}
+
+
+
+.sideBarNav {
+  display: block;
+
+  position: fixed;
+  top: 0px;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  z-index:50;
+  background: $navbg;
+  color: $navtextcolor;
+  padding: 2em;
+  transform: translate3d(0px,0px,0px);
+    transition: all 0.4s ease;
+
+
+  a.sideBarClose {
+    color: rgba(255,255,255,0.4);
+    outline: none;
+    display: block;
+
+    height: 50px;
+    text-decoration: none;
+    font-family: "Raleway",sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: 0.3s;
+
+    svg {
+      width: 1.8em;
+      height: 1.8em;
+      float: left;
+      margin-top: -8px;
+      margin-right: 0.4em;
+
+      path, rect, circle, polygon {
+        fill: rgba(255,255,255,0.4);
+        transition: 0.3s;
+
+      }
+    }
+
+  }
+
+  a.sideBarClose:hover {
+    color: rgba(255,255,255,0.8);
+    outline: none;
+    display: block;
+
+    height: 50px;
+    text-decoration: none;
+    font-family: "Raleway",sans-serif;
+
+
+    svg {
+      width: 1.8em;
+      height: 1.8em;
+      float: left;
+      margin-top: -8px;
+      margin-right: 0.4em;
+      path, rect, circle, polygon {
+        fill: rgba(255,255,255,0.8);
+
+      }
+    }
+
+  }
+
+  nav {
+
+    li {
+      float: none;
+
+      a {
+        color: $navtextcolor;
+        font-weight: 300;
+        font-size: 1.5em;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+  }
+
+}
+
+.sideBarNav.navVisible {
+  display: block;
+
+transform: translate3d(-300px,0px,0px);
+
+}
+
+
+
+.siteWrapper {
+  transition: 0.4s;
+
+
+
+
+}
+
+.siteWrapperOverlay {
+  background: rgba(0,0,0,0);
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  height: 0%;
+  width: 0%;
+  z-index:40;
+  transition: background 0.4s;
+}
+
+.siteWrapperOverlay.navVisible {
+  background: rgba(0,0,0,0.3);
+
+  height: 100%;
+  width: 100%;
+
+transition: background 0.4s;
+}
+
+.siteWrapper.navVisible {
+  transform: translate3d(-40px,0px,0px);
+  filter: blur(4px);
+
+
+
+}
+
+.menuTrigger, .menuTrigger:visited {
+  float: right;
+  padding: 0.6em;
+  color: $white;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  border: 1px solid rgba(255,255,255,0);
+  border-radius: 3px;
+  transition: 0.3s;
+
+  svg {
+    margin-right: 4px;
+    height: 100%;
+
+    path, rect, circle {
+      fill: rgba(255,255,255,0.8);
+    }
+  }
+}
+
+.menuTrigger:hover {
+  float: right;
+  padding: 0.6em;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.8);
+
+  font-size: 1.2em;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+
+  svg {
+    margin-right: 4px;
+    height: 100%;
+
+    path, rect, circle {
+      fill: rgba(255,255,255,0.8);
+    }
+  }
+}
+
+#site-navigation {
+  .menu {
+    ul.children {
+      display: none;
+      position: relative;
+      float: none;
+      top: 0px;
+      left: 0px;
+      padding-left: 8%;
+      box-shadow: none;
+      background: rgba(0,0,0,0.1);
+    }
+
+    .expandLink {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 60px;
+      height: 60px;
+      z-index:5;
+      font-size: 0px;
+      color: transparent;
+      border-bottom: none;
+      background: url("../../../dist/images/downarrow.svg") no-repeat;
+      background-size: 50% 50%;
+      background-position: center center;
+      transition: transform 0.4s;
+    }
+
+    .expandLink:hover {
+
+      background: url("../../../dist/images/downarrow_over.svg") no-repeat;
+      background-size: 50% 50%;
+      background-position: center center;
+    }
+
+    .expandLink.expanded {
+      transform: rotate(180deg);
+    }
+  }
+}

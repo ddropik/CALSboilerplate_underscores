@@ -1,0 +1,81 @@
+.homePageFeature {
+  padding: 2em;
+  text-align: center;
+  color: $white;
+  background-color: transparent;
+  min-height: 400px;
+
+  .button.large {
+    padding: 2em;
+    font-weight: 300;
+    font-family: "Raleway",sans-serif;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    margin-top: 2em;
+  }
+
+  h2 {
+    position:relative;
+    z-index:5;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 1.6em;
+    margin-top: 3.5em;
+    letter-spacing: 1px;
+  }
+
+  h2.subHeading {
+    position:relative;
+    z-index:5;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    color: rgba(255,255,255,0.8);
+    -webkit-font-smoothing: antialiased;
+    font-size: 3.7em;
+    margin-top: 0px;
+  }
+
+  .equipment {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index:3;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}
+
+.homeSubFeatures>div {
+    padding: 5em;
+
+    div.icon {
+      margin: 0 auto;
+      width: 50%;
+      margin-bottom: 1.4em;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 1.0em;
+      font-family: "Raleway",sans-serif;
+      font-weight: 500;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.6;
+      font-family: "Raleway",sans-serif;
+      font-weight: 300;
+    }
+}

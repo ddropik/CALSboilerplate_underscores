@@ -1,6 +1,6 @@
 // Load plugins
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
@@ -18,8 +18,8 @@ var gulp = require('gulp'),
 
 // Styles
 gulp.task('styles', function() {
-  return gulp.src('sass/**/*.scss')
-    .pipe(sass({ style: 'expanded', }))
+  return gulp.src('sass/master.scss')
+    .pipe(sass({ style: 'expanded', errLogToConsole: true }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('dist/styles/unminified'))
     .pipe(rename({ suffix: '.min' }))
@@ -33,8 +33,6 @@ gulp.task('styles', function() {
 // Scripts
 gulp.task('scripts', function() {
   return gulp.src(['./js/CALSboilerplate_underscores_custom.js'])
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(rename({ suffix: '.min' }))
@@ -44,10 +42,18 @@ gulp.task('scripts', function() {
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
+// Script Debug
+gulp.task('debug', function() {
+  return gulp.src(['./js/CALSboilerplate_underscores_custom.js'])
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('default'))
+    .pipe(notify({ message: 'Debug Scripts task complete' }));
+});
+
 // Images
 gulp.task('images', function() {
   return gulp.src('img/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(cache(imagemin({ svgoPlugins: [{removeViewBox: false}], progressive: true })))
     .pipe(livereload(server))
     .pipe(gulp.dest('dist/images'))
     .pipe(notify({ message: 'Images task complete' }));
